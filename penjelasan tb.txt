@@ -1,0 +1,57 @@
+1. kita importkan library yang akan digunakan 
+
+2. pada isi tabel tersebut terlihat bahwa terdapat kolom jenis kelain , pekerjaan , status, ipk dan lulus 
+lalu kita akan meng clasifikasikannya apakah dia lulus tepat waktu atau terlambat
+lalu terdapat juga attribut jenis kelain , pekerjaan , status, ipk
+dalam melakukan prediksi mesin tidak dapat melakukan terhadap data yang masih bersifat categorical seperti jenis kelain , pekerjaan , status
+
+sedangkan ipk adalah data numerical
+jadi mesin akan menerima inputan angka
+lalu data yang ada di dataset ini akan di ubah menjadi angka yang dinamakan OneHotEndCoding
+yang lulus tepat waktu bernilai 1 dan yang tidak 0
+
+3. lalu kita lakukan dataset spliting menjadi data traing dan testing
+data x di ibaratkan seperti data atau atribut selain atribut target maka kita drop data dan kita sisakan selain data target
+sedangan y itu data target dan data target kita data lulus
+kita membagi untuk data testnya 0,2 berarti perbandingannya training 80 dan testing 20%
+
+untuk data training nya itu ada 4 kolom yaitu 
+jenis kelain , pekerjaan , status, dan ipk
+
+dan untuk y nya hanya ada 1 dan dia membaginya 12 dan 3 artinya 12 untuk data training dan 3 untuk data testing
+
+4. kolom ini untuk melakukan prepocessing dimana semua data kategori akan diubah menjadi data numeric denga OneHotEndCoding
+untuk keperluan melakukan nya diperlukan penggambilan dari librari yang di import
+
+5. untuk di row ini kita akan melakukan Naive Bayes Classifier 
+pipline kegunaannya untuk menampung data yang sudah diprepocessing di dalam variabel processor 
+dan data yang sudah di proses tadi akan di proses di algoritma gaussianNB di kita letakan di pipline
+dan pipline ini kita importkan dari library skealern 
+
+6. melakukan training data 
+ini adalah hasil yang kita info dari data yang telah kita terain
+
+7. lalu kita akan melihat performa kita ,artinya kita bisa melihat seberapa bagus performa yg kita buat
+untuk data training kita dapat score 0,916
+
+8. dan untuk data testingnya kita mendapat 1.0
+
+9. sekarang data akan di plot menggunakan confusion matrix 
+jangan lupa juga untuk mengimportkan library plot nya dari jcopml
+
+di gambar ini kita bisa melihat persebaran data kita untuk di data training kita mendapatkan score 0.91% dan 100%
+tadi kita kan sudah membagi 12 data training dan data 3 data testing yang seharusnya aktualnya lulus terlambat dan malah kita prediksi tepat waktu
+
+dan untuk gambar kotak hijau untuk data testing artinya jika dia aktual lulus tepat waktu maka predict nya tepat waktu dan untuk terlambat maka dia telat
+
+10. dari data prediksi yang telah kita siapkan tadi maka akan kita panggil di dalam variabel pred 
+ini hasil dari data yang telah di siapkan tadi maka akan muncul pada tabel data mahasiswa nya tadi dengan ipk 2.7
+
+11. kita akan memprediksikan pipline dengan model yang kita buat tadi 
+jadi data kita tadi dapat memprediksi bahwa mahasiswa ini lulus terlambat
+
+12. lalu kita buatkan pipline pada kolom baru untuk menampilkan hasil prediksi ke dalam table
+
+
+
+
